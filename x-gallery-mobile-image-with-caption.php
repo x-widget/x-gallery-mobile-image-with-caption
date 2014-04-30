@@ -30,7 +30,7 @@ $list = g::posts( array(
 						<div class='caption_image'>					
 						<?						
 							$imgsrc = x::post_thumbnail($_bo_table, $li['wr_id'], 378, 128);							
-							if ( empty($imgsrc['src']) )  $imgsrc['src'] = x::url().'/widget/'.$widget_config['name'].'/img/no-image.png';
+							if ( empty($imgsrc['src']) )  $imgsrc['src'] = $widget_config['url'].'/img/no-image.png';
 														
 							$img = "<img src='$imgsrc[src]'/>";						
 							echo "<div class='img-wrapper'><a href='$li[url]'>".$img."</a></div>";
@@ -54,7 +54,7 @@ $list = g::posts( array(
 			<div class='container <?=$nomargin?>'>
 				<div class='images_with_captions'>
 						<div class='caption_image'>					
-						<? $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
+						<? $imgsrc['src'] = $widget_config['url'].'/img/no-image.png';
 														
 							$img = "<img src='$imgsrc[src]'/>";						
 							echo "<div class='img-wrapper'><a href='".url_site_config()."'>".$img."</a></div>";
