@@ -58,7 +58,7 @@ $list = g::posts( array(
 			<div class='container <?=$nomargin?>'>
 				<div class='images_with_captions'>
 						<div class='caption_image'>					
-						<? $imgsrc['src'] = $latest_skin_url.'/img/no-image.png';
+						<? $imgsrc['src'] = $widget_config['url'].'/img/no-image.png';
 														
 							$img = "<img src='$imgsrc[src]'/>";						
 							echo "<div class='img-wrapper'><a href='".url_site_config()."'>".$img."</a></div>";
